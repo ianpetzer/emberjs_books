@@ -23,13 +23,6 @@ ActiveRecord::Schema.define(:version => 20130508072526) do
     t.datetime "updated_at",  :null => false
   end
 
-  create_table "books_tags", :id => false, :force => true do |t|
-    t.integer "book_id"
-    t.integer "tag_id"
-  end
-
-  add_index "books_tags", ["book_id", "tag_id"], :name => "index_books_tags_on_book_id_and_tag_id"
-
   create_table "reviews", :force => true do |t|
     t.string   "title"
     t.text     "body"

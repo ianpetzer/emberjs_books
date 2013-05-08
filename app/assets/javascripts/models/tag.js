@@ -1,6 +1,6 @@
 App.Tag = DS.Model.extend ({
   name: attr('string'),
-  books: DS.hasMany('App.Book', { inverse: 'tags' })
+  book: DS.belongsTo('App.Book', { inverse: 'tags' })
 });
 
 App.Tag.FIXTURES = [{

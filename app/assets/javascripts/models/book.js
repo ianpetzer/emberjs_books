@@ -29,7 +29,7 @@ App.Book.FIXTURES = [
     author: 'Niccolo Machiavelli',
     description: 'Considered by most to be the authoritative text on statesmanship and power (how to obtain it as well as an illustration of its trappings), although certainly a shrewd one.',
     quote: 'From this arises an argument: whether it is better to be loved than feared. I reply that one should like to be both one and the other; but since it is difficult to join them together, it is much safer to be feared than to be loved when one of the two must be lacking.',
-    tags: [1, 4]
+    tags: [4]
   },
   {
     id: 3,
@@ -38,7 +38,7 @@ App.Book.FIXTURES = [
     author: 'Kurt Vonnegut',
     description: 'Through the beloved Billy Pilgrim, we see the central themes of Vonnegut’s humanism along with his satirical take on how disgusting it is when humans don’t use their (limited) free will to prevent simple atrocities. A great example of how we use humor to deal with hardship, and the conflict between the way heroism is conveyed through stories for actions in situations that perhaps could have been avoided altogether.',
     quote: 'So then I understood. It was war that made her so angry. She didn’t want her babies or anybody else’s babies killed in wars. And she thought wars were partly encouraged by books and movies.',
-    tags: [1, 4, 6]
+    tags: [6]
   }
 ];
 

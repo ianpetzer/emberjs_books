@@ -9,12 +9,12 @@
 
   addAnotherTag: function(tag) {
     var thisBook = this.get('model');
-    var tag = thisBook.get('tags').createRecord();
-    tag.get('books').pushObject(thisBook);
+    var tag = thisBook.get('tags').createRecord();    
   },
 
   removeTag: function(tag) {
-    this.get('model').get('tags').removeObject(tag);
+    //this.get('model').get('tags').removeObject(tag);    
+    tag.deleteRecord();
   }
 
 });

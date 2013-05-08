@@ -29,6 +29,7 @@ slaughterhouse_five = Book.create(
     description: 'Through the beloved Billy Pilgrim, we see the central themes of Vonnegut’s humanism along with his satirical take on how disgusting it is when humans don’t use their (limited) free will to prevent simple atrocities. A great example of how we use humor to deal with hardship, and the conflict between the way heroism is conveyed through stories for actions in situations that perhaps could have been avoided altogether.',
     quote: 'So then I understood. It was war that made her so angry. She didn’t want her babies or anybody else’s babies killed in wars. And she thought wars were partly encouraged by books and movies.',
   )
+  
 fiction = Tag.create(name: 'Fiction')
 non_fiction = Tag.create(name: 'Non-Fiction')
 classic = Tag.create(name: 'Classic')

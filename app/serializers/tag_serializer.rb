@@ -4,5 +4,5 @@ class TagSerializer < ActiveModel::Serializer
 
   attributes :id, :name
 
-  has_many :books
+  has_one :book
 end

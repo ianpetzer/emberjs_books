@@ -8,11 +8,11 @@ class CreateTags < ActiveRecord::Migration
     end
     add_index :tags, :book_id
 
-	create_table :books_tags, :id => false do |t|
-	  t.references :book, :tag
-	end
+	# create_table :books_tags, :id => false do |t|
+	#   t.references :book, :tag
+	# end
 
-	add_index :books_tags, [:book_id, :tag_id]
+	# add_index :books_tags, [:book_id, :tag_id]
 
   end
 end
