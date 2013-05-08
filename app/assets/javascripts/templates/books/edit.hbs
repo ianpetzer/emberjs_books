@@ -1,0 +1,51 @@
+<div class="editBook">
+  <form class="form-horizontal">
+    <div class="control-group">
+      <label class="control-label">Title</label>
+
+      <div class="controls">
+        {{view Ember.TextField valueBinding='title'}}
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">Author</label>
+
+      <div class="controls">
+        {{view Ember.TextField valueBinding='author'}}
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">Promo link</label>
+
+      <div class="controls">
+        {{view Ember.TextField valueBinding='promoLink'}}
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">Description</label>
+
+      <div class="controls">
+        {{view Ember.TextArea valueBinding='description'}}
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label">Quote</label>
+
+      <div class="controls">
+        {{view Ember.TextArea valueBinding='quote'}}
+      </div>
+    </div>
+  </form>
+  <div>
+    {{partial 'books/editable_tags'}}
+  </div>
+  <button class="btn btn-primary" {{action "save"}}>Save</button>
+</div>
+
+<div class="seperator">
+  <br><h1>Preview of listing</h1><br>
+</div>
+
+{{template 'books/show'}}
+
+

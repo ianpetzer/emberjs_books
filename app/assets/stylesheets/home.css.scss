@@ -1,0 +1,62 @@
+#wrapper {
+  background-color: whitesmoke;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.searchResults {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.searchResult {
+  border-style: solid;
+  border-color: #DDD;
+  border-width: 1px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 12px 30px;
+  background: white;
+  position: relative;
+}
+
+.tags {
+  margin-top: 10px;
+}
+
+.tags ul,
+.tags li {
+  list-style: none;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.tags li:after {
+  content: "| ";
+}
+
+.tags li:last-of-type:after {
+  content: "";
+}
+
+.bookDescription {
+  margin-top: 12px;
+}
+
+
+.contactInfo ul,
+.contactInfo li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.services {
+  margin-top: 12px;
+}
+
+.seperator {
+  background-color: white;
+  width:  100%;
+}

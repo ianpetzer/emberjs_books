@@ -1,0 +1,39 @@
+.blockLink
+  {
+  position:absolute;
+  top:0;
+  left: 0;
+  width:100%;
+  height:100%;
+  z-index: 1;
+  background-color:#ffffff;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity:0;
+}
+
+.searchBox {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.floatRight {
+  float: right;
+  text-align: right;
+}
+
+.noBullets ul,
+.noBullets li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navBar ul,
+.navBar li {
+  list-style: none;
+  display: inline;
+  margin: 0;
+  padding: 1em;
+}

@@ -1,0 +1,32 @@
+<div class="searchResults">
+  {{#if searchResults}}
+    {{#each book in searchResults}}
+      <div class="searchResult">
+        <h2>{{book.title}}</h2>
+
+        <div class="tags">
+          <i class="icon-tags"></i>
+          <ul>
+            {{#each tag in book.tags}}
+              <li>
+                {{tag.name}}
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="bookDescription">{{book.description}}</div>
+
+        <div>
+          {{#if book.reviewsAvailable}}
+            <i class="icon-thumbs-up"></i> Reviews available
+          {{else}}
+            Be the first to add a review!
+          {{/if}}
+
+        </div>
+        {{#linkTo "books.show" book class="blockLink"}}{{/linkTo}}
+      </div>
+
+    {{/each}}
+  {{/if}}
+</div>

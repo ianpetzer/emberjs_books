@@ -1,0 +1,9 @@
+<h2><i class="icon-tags"></i> Tags:</h2>
+<ul class="noBullets">
+  {{#each tag in model.tags}}
+    <li>
+        {{view Ember.TextField valueBinding='tag.name'}} <a href='#' {{action removeTag tag}}><i class="icon-minus-sign"></i></a>
+    </li>
+  {{/each}}
+</ul>
+<button class="btn btn-primary" {{action "addAnotherTag"}}><i class="icon-plus-sign icon-white"></i> One more tag</button>

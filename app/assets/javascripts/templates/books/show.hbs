@@ -1,0 +1,40 @@
+<div class="bookDetails">
+  <div class="floatRight contactInfo">
+    <ul>
+      <li><a {{bindAttr href='promoLink'}}>Add this book to your collection</a></li>
+    </ul>
+  </div>
+  <h1>{{model.title}}</h1>
+
+  <div class="tags">
+    <i class="icon-tags"></i>
+    <ul>
+      {{#each tag in model.tags}}
+        <li>
+          {{tag.name}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="bookDescription">{{model.description}}</div>
+  <div class="bookDescription">{{model.quote}}</div>
+
+  <div class="reviews">
+    {{#if model.reviewsAvailable}}
+      <br><h3>{{model.reviews.length}} Reviews available</h3><br>
+      {{#each review in model.reviews}}      
+        <div class="review">
+          <h4>{{review.title}}</h4>
+          {{review.body}}
+        </div>
+      {{/each}}
+    {{else}}
+      <i class="icon-thumbs-up"></i> Be the first to add a review!
+    {{/if}}
+  </div>
+
+  <div class="floatRight">
+    {{#linkTo "books.edit" model class='btn btn-primary'}}Edit this book{{/linkTo}}
+  </div>
+
+</div>

@@ -1,0 +1,23 @@
+<div id="wrapper">
+
+  <nav class="navBar">
+    <ul>
+      <li>{{#linkTo "index"}}Home{{/linkTo}}</li>
+      <li>{{#linkTo "books.new"}}Add a book{{/linkTo}}</li>
+      <li>{{#linkTo "demoPages"}}Demo pages{{/linkTo}}</li>
+    </ul>
+  </nav>
+  <br>
+
+  <div class="searchBox">
+    <form class="form-inline">
+      <label>Book title? </label> {{view Ember.TextField action="search" valueBinding="title"}}
+      <label>Author? </label> {{view Ember.TextField action="search" valueBinding="author"}}
+      <button class="btn btn-primary" {{action "search"}}>Search</button>
+
+    </form>
+  </div>
+
+  {{outlet}}
+
+</div>
