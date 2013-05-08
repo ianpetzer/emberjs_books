@@ -4,10 +4,12 @@ gem 'rails', '3.2.13'
 gem 'ember-rails'
 gem 'active_model_serializers', :github => 'rails-api/active_model_serializers'
 
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 group :development, :test do
+  gem 'qunit-rails'	
   gem 'debugger'
   gem 'sqlite3'
 end

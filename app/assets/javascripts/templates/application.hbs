@@ -13,7 +13,7 @@
     <form class="form-inline">
       <label>Book title? </label> {{view Ember.TextField action="search" valueBinding="title"}}
       <label>Author? </label> {{view Ember.TextField action="search" valueBinding="author"}}
-      <button class="btn btn-primary" {{action "search"}}>Search</button>
+      <button class="btn btn-primary" {{action "search"}} id="searchButton">Search</button>
 
     </form>
   </div>
