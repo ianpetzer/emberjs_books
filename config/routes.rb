@@ -13,11 +13,11 @@ Books::Application.routes.draw do
   end
 
   root :to => 'ember#index'
-  resources :books #, :except => :edit, :constraints => FormatTest.new(:json)
+  resources :books #, :except => :edit, :constraints => Fx
   resources :tags #, :except => :edit, :constraints => FormatTest.new(:json)
   resources :reviews #, :except => :edit, :constraints => FormatTest.new(:json)
 
-  #TODO 
+  #TODO
   #get '*foo', :to => 'ember#index', :constraints => FormatTest.new(:html)
-  
+
 end
