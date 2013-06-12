@@ -1,10 +1,5 @@
   App.BooksEditController = Ember.ObjectController.extend({
-
-  helloFromController: function() {
-    //return 'Hello from controller'
-    return this.get('model').get('title');
-  }.property('title'),
-
+    
   save: function () {
     this.get('store').commit();
     this.transitionToRoute('books.show', this.get('model'));
