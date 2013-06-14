@@ -1,6 +1,7 @@
 module("Books Ember.js Learning app", {
   setup: function() {
     Ember.run(App, App.advanceReadiness);
+    Ember.Test.Adapter.create();
   },
   teardown: function() {
     App.reset();
