@@ -4,8 +4,4 @@ App.Router.map(function () {
     this.route('show', {path: ':book_id/show'} );
     this.route('new');
   });
-
-  this.resource('demoPages', function() {
-      this.route('simple');
-  });
 });
