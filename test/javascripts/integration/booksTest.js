@@ -37,7 +37,7 @@ test("Check retrieval of books", function() {
 });
 
 test("Check editing of a book updates search results", function() {
-  expect(6);
+  expect(7);
 
   visit("/").then(function() {
     return click("#searchButton");  //Click the search button
@@ -66,6 +66,14 @@ test("Check editing of a book updates search results", function() {
     return click("#searchButton"); //Click the search button
   }).then(function() {
     ok(exists(".searchResult h2:contains('The Great Modification')"), "Retrieved modified title from search list");
+
+   throws(
+      function() {
+        find(".searchResult h2:contains('The Great Gatsby')") ;
+      },
+      "The Great Gatbsy title has been changed in the search results!"
+    );
+
   });
 
 });
