@@ -52,22 +52,24 @@ test("Check editing of a book updates search results", function() {
 
     return click(".searchResult h2:contains('The Great Gatsby') ~ a");  //Select the search result for The Great Gatsby
   }).then(function() {
+
     equal($.trim(find(".tags ul li:first").text()), "Fiction", "Found first tag");
     equal($.trim(find(".tags ul li:eq(1)").text()), "Classic", "Found second tag");
     return click("#editBook");  //Click the search button
   }).then(function() {
+
     equal(find(".titleInputBox").val(), "The Great Gatsby", "Found book title input box");
-
     fillIn(".titleInputBox", ".editBook", "The Great Modification");
-
     equal(find(".titleInputBox").val(), "The Great Modification", "Title of book changed on edit page");
     return click(".saveEditsToBook");  //Save the changes
   }).then(function() {
+
     return click("#searchButton"); //Click the search button
   }).then(function() {
+
     ok(exists(".searchResult h2:contains('The Great Modification')"), "Retrieved modified title from search list");
 
-   throws(
+    throws(
       function() {
         find(".searchResult h2:contains('The Great Gatsby')") ;
       },
