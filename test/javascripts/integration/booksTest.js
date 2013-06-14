@@ -1,11 +1,20 @@
-module("Books Ember.js Learning app", {
+module("Ember.js Library", {
   setup: function() {
+    console.log('setting up');
     Ember.run(App, App.advanceReadiness);
-    Ember.Test.Adapter.create();
   },
   teardown: function() {
+    console.log('tearing down');
     App.reset();
   }
+});
+
+test("Check HTML is returned", function() {
+
+  visit("/").then(function() {
+    ok(exists("*"), "Found HTML!");
+  });
+
 });
 
 test("Check retrieval of books", function() {
@@ -60,4 +69,7 @@ test("Check editing of a book updates search results", function() {
   });
 
 });
+
+
+
 
